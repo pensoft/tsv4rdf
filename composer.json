@@ -1,0 +1,35 @@
+{
+    "name": "pensoft/tsv4rdf",
+    "type": "library",
+    "description": "Custom PHP separated values parser to TriG serialization format",
+    "homepage": "https://pensoft.net",
+    "readme": "README.md",
+    "keywords": ["pensoft", "laravel", "tsv", "rdf", "trig", "parser"],
+    "version": "1.0.0",
+    "authors": [
+      {
+        "name": "Georgi Zhelezov",
+        "email": "gzhelezov@pensoft.net",
+        "homepage": "https://pensoft.net",
+        "role": "Developer"
+      }
+    ],
+    "require": {
+        "ext-curl": "*",
+        "php": ">=5.4.0",
+        "ixudra/curl": "^6.12"
+    },
+    "autoload": {
+        "psr-4": {"Pensoft\\TSV4RDF\\": "src/"}
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pensoft\\TSV4RDF\\Providers\\TSV4RDFServiceProvider"
+            ],
+            "aliases": {
+                "TSV4RDF": "Pensoft\\TSV4RDF\\Facades\\TSV4RDF"
+            }
+        }
+    }
+}
